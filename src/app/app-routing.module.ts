@@ -7,7 +7,6 @@ import { ListPrestationsComponent } from './prestations/containers/list-prestati
 
 
 const appRoutes: Routes = [
-    { path: 'login', component: LoginComponent },
     { path: 'prestations', component: ListPrestationsComponent },
     // { path: 'hero/:id',      component: HeroDetailComponent },
      { path: '',
@@ -21,7 +20,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
         appRoutes,
-        { enableTracing: true } // <-- debugging purposes only
+        { enableTracing: false } // <-- debugging purposes only
       )
   ]
 })
