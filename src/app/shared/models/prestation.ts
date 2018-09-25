@@ -17,12 +17,12 @@ constructor(fields?: Partial<Prestation>) { // fields optionnel + partiellement 
 }
 
 public total_HT() {
-    console.log('total HT called');
+    // console.log('total HT called');
 
     return this.tjm_ht * this.nb_jours;
 }
 public total_TTC(tva?: number) {
-    console.log('total TTH called');
+    // console.log('total TTH called');
 
     if (!tva) {
         return this.total_HT() + (1 + this.total_HT() / 100);
