@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Prestation } from '../../../shared/models/prestation';
+import { PrestationsService } from '../../services/prestations.service';
+import { State } from '../../../shared/enums/state.enum';
 
 @Component({
   selector: 'app-list-prestations',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPrestationsComponent implements OnInit {
 
-  constructor() { }
+  public collection: Prestation[];
+  public states = Object.values(State);
+
+  constructor(
+      private prestationService: PrestationsService
+  ) { }
 
   ngOnInit() {
+      // this.collection = this.prestationService.getCollection;
+      this.collection = this.prestationService.collection;
   }
 
 }

@@ -7,5 +7,6 @@ export interface PrestationI {
         client: string;
         nb_jours: number;
         tjm_ht: number;
+        taux_tva: number;
         state: State;
 }
