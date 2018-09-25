@@ -19,11 +19,11 @@ import { Router } from '@angular/router';
   imports: [
     BrowserModule,
     UiModule,
-    LoginModule,
-    PageNotFoundModule,
     NgbModule.forRoot(),
+    AppRoutingModule,
+    LoginModule,
     PrestationsModule,
-    AppRoutingModule
+    PageNotFoundModule,
 
   ],
   providers: [],

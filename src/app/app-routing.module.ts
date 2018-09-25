@@ -7,13 +7,11 @@ import { ListPrestationsComponent } from './prestations/containers/list-prestati
 
 
 const appRoutes: Routes = [
-    { path: 'prestations', component: ListPrestationsComponent },
     // { path: 'hero/:id',      component: HeroDetailComponent },
      { path: '',
       redirectTo: '/login',
       pathMatch: 'full'
     },
-    { path: '**', component: PageNotFoundComponent }
   ];
 
 @NgModule({
