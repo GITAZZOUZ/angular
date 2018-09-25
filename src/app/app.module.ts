@@ -5,10 +5,12 @@ import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
 
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
-import { PrestationsModule } from './prestations/prestations.module';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
+import { PrestationsModule } from './prestations/prestations.module';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UiModule,
     LoginModule,
     PageNotFoundModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    PrestationsModule,
+    AppRoutingModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(router: Router) {
+        console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+      }
+}
