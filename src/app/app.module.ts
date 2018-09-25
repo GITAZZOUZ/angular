@@ -9,7 +9,7 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
-import { PrestationsModule } from './prestations/prestations.module';
+// import { PrestationsModule } from './prestations/prestations.module';
 import { Router } from '@angular/router';
 
 @NgModule({
@@ -22,7 +22,6 @@ import { Router } from '@angular/router';
     NgbModule.forRoot(),
     AppRoutingModule,
     LoginModule,
-    PrestationsModule,
     PageNotFoundModule,
 
   ],

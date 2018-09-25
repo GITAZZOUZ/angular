@@ -12,6 +12,10 @@ const appRoutes: Routes = [
       redirectTo: '/login',
       pathMatch: 'full'
     },
+    {
+        path: 'prestations',
+        loadChildren: './prestations/prestations.module#PrestationsModule',
+      },
   ];
 
 @NgModule({

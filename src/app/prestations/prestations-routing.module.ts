@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListPrestationsComponent } from './containers/list-prestations/list-prestations.component';
 
 const appRoutes: Routes = [
-    { path: 'prestations', component: ListPrestationsComponent },
+    { path: '', component: ListPrestationsComponent },
  ];
 @NgModule({
     imports: [
