@@ -1,0 +1,22 @@
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th *ngFor="let item of headers" scope="col"> {{ item }} </th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-content></ng-content>
+            <!-- <tr *ngFor="let presta of collection">
+                <app-prestation [item]='presta'></app-prestation>
+            </tr> -->
+
+            <!-- <tr app-prestation [item]='presta'  *ngFor="let presta of collection">
+                </tr> -->
+        </tbody>
+    </table>
+</div>
+<hr>
+<!-- <p> select permet de choisir la source de projection </p> -->
+<ng-content select=".toto"></ng-content>

@@ -1,17 +1,5 @@
-<div class="table-responsive">
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th *ngFor="let item of headers" scope="col"> {{ item }} </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let presta of collection">
-        <app-prestation [item]='presta' ></app-prestation>
-      </tr>
-      
-      <!-- <tr app-prestation [item]='presta'  *ngFor="let presta of collection">
-        </tr> -->
-     </tbody>
-  </table>
-</div>
+<app-tableau [headers]="listHeaders">
+    <!-- <p>projection à affichier dans tableau.content  </p> dans tableau.content  <ng-content></ng-content> -->
+    <app-prestation *ngFor="let presta of collection" [item]='presta'></app-prestation>
+    <p class="toto"> deuxieme projection </p>
+</app-tableau>

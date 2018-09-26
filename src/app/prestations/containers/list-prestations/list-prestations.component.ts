@@ -10,7 +10,7 @@ import { PrestationsService } from '../../services/prestations.service';
 export class ListPrestationsComponent implements OnInit {
 
   public collection: Prestation[];
-  public headers: string[];
+  public listHeaders: string[];
 
   constructor(
       private prestationService: PrestationsService
@@ -19,7 +19,7 @@ export class ListPrestationsComponent implements OnInit {
   ngOnInit() {
       // this.collection = this.prestationService.getCollection;
       this.collection = this.prestationService.collection;
-      this.headers = [
+      this.listHeaders = [
         'Type',
         'Client',
         'Nb Jours',
