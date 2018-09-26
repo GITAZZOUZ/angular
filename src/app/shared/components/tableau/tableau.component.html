@@ -1,6 +1,6 @@
 
 <div class="table-responsive">
-    <table class="table">
+    <table class="table table-hover">
         <thead class="thead-dark">
             <tr>
                 <th *ngFor="let item of headers" scope="col"> {{ item }} </th>
@@ -19,4 +19,10 @@
 </div>
 <hr>
 <!-- <p> select permet de choisir la source de projection </p> -->
-<ng-content select=".toto"></ng-content>
+<!-- <ng-content select=".add"></ng-content> -->
+<div *ngIf="addRow">
+        <a [routerLink]="addRow.route"> 
+          <fa-icon [icon]='addRow.icon'></fa-icon>  
+          {{ addRow.libelle }} 
+         </a>
+       </div>
