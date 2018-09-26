@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Prestation } from '../../shared/models/prestation';
 import { fakePrestations } from './fakeprestations';
+import { State } from '../../shared/enums/state.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,9 @@ set collection(col: Prestation[]) {
     // get item in collection by id
 
     // update collection
-
+public update(item: Prestation, state: State) {
+item.state = state;
+}
     // delete collection
 
 
