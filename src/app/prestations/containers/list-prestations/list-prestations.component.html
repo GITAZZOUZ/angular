@@ -1,6 +1,7 @@
 <app-tableau [headers]="listHeaders" [addRow]='row' >
     <!-- <p>projection à affichier dans tableau.content  </p> dans tableau.content  <ng-content></ng-content> -->
-    <app-prestation *ngFor="let presta of collection" [item]='presta'></app-prestation>
+    <app-prestation *ngFor="let presta of collection" [item]='presta'>
+    </app-prestation>
     <!-- <p class="toto"> deuxieme projection </p> -->
-
+    <app-btn-tab [addRow]="row"></app-btn-tab>
 </app-tableau>

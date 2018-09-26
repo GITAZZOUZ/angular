@@ -8,6 +8,7 @@
         </thead>
         <tbody>
             <ng-content></ng-content>
+
             <!-- <tr *ngFor="let presta of collection">
                 <app-prestation [item]='presta'></app-prestation>
             </tr> -->
@@ -20,9 +21,4 @@
 <hr>
 <!-- <p> select permet de choisir la source de projection </p> -->
 <!-- <ng-content select=".add"></ng-content> -->
-<div *ngIf="addRow">
-        <a [routerLink]="addRow.route"> 
-          <fa-icon [icon]='addRow.icon'></fa-icon>  
-          {{ addRow.libelle }} 
-         </a>
-       </div>
+

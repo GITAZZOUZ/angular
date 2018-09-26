@@ -5,7 +5,7 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 
 const appRoutes: Routes = [
     { path: '', component: ListPrestationsComponent },
-    { path: 'add', component: ListPrestationsComponent },
+    // { path: 'add', component: ListPrestationsComponent },
  ];
 @NgModule({
     imports: [

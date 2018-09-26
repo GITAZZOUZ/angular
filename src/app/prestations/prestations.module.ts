@@ -4,8 +4,7 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PrestationComponent } from './components/prestation/prestation.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   imports: [
