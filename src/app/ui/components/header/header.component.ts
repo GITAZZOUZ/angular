@@ -12,11 +12,14 @@ export class HeaderComponent implements OnInit {
 public title = 'My CRM';
 public faBars = faBars;
 public faUser = faUser;
-
+public open = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+//   public toggle() {
+//       this.open = !this.open;
+//   }
 }

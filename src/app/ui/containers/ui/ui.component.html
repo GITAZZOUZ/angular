@@ -1,27 +1,24 @@
 <header class="fixed-top">
     <app-header #header></app-header>
-  </header>
-  
-  <main [ngClass]="{'close-aside': header.open === false}">
-  
-    <div class="shadow position-fixed">
+</header>
+<main [ngClass]="{'close-aside': header.open === false}">
+    <div class="shadow position-fixed" (click)="header.open = false">
     </div>
-  
     <aside>
-      <div class="scroller">
-        <app-nav></app-nav>
-      </div>
+        <div class="scroller">
+            <app-nav></app-nav>
+        </div>
     </aside>
-  
+
     <div class="page">
-  
-      <div class="contents">
-         <router-outlet></router-outlet>
-      </div>
-  
-      <footer>
-        <app-footer></app-footer>
-      </footer>
+
+        <div class="contents">
+            <router-outlet></router-outlet>
+        </div>
+
+        <footer>
+            <app-footer></app-footer>
+        </footer>
     </div>
-  
-  </main>
+
+</main>

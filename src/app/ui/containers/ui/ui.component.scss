@@ -39,6 +39,9 @@ aside {
   z-index: 1000;
 }
 
+.close-aside .shadow{
+display: none;
+}
 .page {
   display: flex;
   flex-direction: column;
