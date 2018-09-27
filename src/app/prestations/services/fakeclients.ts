@@ -1,5 +1,5 @@
 import { State } from '../../shared/enums/state.enum';
-import { Client } from '../../shared/models/client';
+import { Client } from '../../shared/models/Client';
 
 export const fakeClients: Client[] = [
 new Client( {

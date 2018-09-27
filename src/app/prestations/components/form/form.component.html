@@ -2,12 +2,13 @@
     <form novalidate #form="ngForm" (ngSubmit)="process()">
 
         <div class="form-group">
-            <label for="type">tyrp prestation </label>
-            <input [(ngModel)]="newPresta.type_presta" name="type" type="text" class="form-control" id="type" required>
+            <label for="type">type prestation </label>
+            <input #type="ngModel" [(ngModel)]="newPresta.type_presta" name="type" type="text" class="form-control" id="type" required>
             <!-- [(ngModel)]="newPresta.type_presta"
                 <=>
                 [value]="presta.typePresta" (keyup)="change()"
             -->
+            <div class="alert alert-danger" *ngIf="type.invalid && type.touched"> Champs invalide </div>
             {{ newPresta.type_presta}}
         </div> 
 
