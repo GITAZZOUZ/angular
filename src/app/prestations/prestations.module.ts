@@ -4,6 +4,10 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PrestationComponent } from './components/prestation/prestation.component';
+import { AddPrestationComponent } from './components/add-prestation/add-prestation.component';
+import { EditPrestationComponent } from './components/edit-prestation/edit-prestation.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,8 +15,9 @@ import { PrestationComponent } from './components/prestation/prestation.componen
     CommonModule,
     PrestationsRoutingModule,
     SharedModule,
+    FormsModule
   ],
-  declarations: [ListPrestationsComponent, PrestationComponent],
+  declarations: [ListPrestationsComponent, PrestationComponent, AddPrestationComponent, EditPrestationComponent, FormComponent],
   exports: [
   // ListPrestationsComponent
 ]

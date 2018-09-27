@@ -36,6 +36,9 @@ public update(item: Prestation, state: State) {
 item.state = state;
 }
     // delete collection
+// add item in collection
+public add(item: Prestation): void {
+    this.collection.push(item);
 
-
+}
 }
