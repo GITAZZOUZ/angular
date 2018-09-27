@@ -15,9 +15,11 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
-// import { PrestationsModule } from './prestations/prestations.module';
 import { Router } from '@angular/router';
-
+import { environment } from '../environments/environment.firebase';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { Router } from '@angular/router';
     AppRoutingModule,
     LoginModule,
     PageNotFoundModule,
-
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'fr' } ],
   bootstrap: [AppComponent]

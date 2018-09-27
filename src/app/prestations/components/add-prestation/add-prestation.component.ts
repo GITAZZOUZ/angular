@@ -19,6 +19,10 @@ export class AddPrestationComponent implements OnInit {
   }
   public add(item: Prestation): void {
 this.prestationService.add(item);
+// // lancer la requete de http
+// this.prestationService.add(item).subscribe((data) => {
+//     // exploite res du serveur
+// });
 this.router.navigate(['prestations']);
   }
 }
