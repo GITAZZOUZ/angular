@@ -63,6 +63,10 @@ export class PrestationsService {
 
   update(item: Prestation, option?: State): Promise<any> {
     const presta  = {...item};
+    console.log('8555555555555555555');
+    console.log(item);
+
+
     if (option) {
       presta.state = option;
     }

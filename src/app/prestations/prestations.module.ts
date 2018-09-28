@@ -10,6 +10,7 @@ import { FormComponent } from './components/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    RouterModule
   ],
   // tslint:disable-next-line:max-line-length
   declarations: [ListPrestationsComponent, PrestationComponent, AddPrestationComponent, EditPrestationComponent, FormComponent, FormReactiveComponent],

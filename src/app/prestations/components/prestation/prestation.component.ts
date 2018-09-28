@@ -2,8 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Prestation } from '../../../shared/models/prestation';
 import { State } from '../../../shared/enums/state.enum';
 import { PrestationsService } from '../../services/prestations.service';
+import {Router} from '@angular/router';
 
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -16,7 +18,8 @@ export class PrestationComponent implements OnInit {
     public states = Object.values(State);
     public faTrashAlt = faTrashAlt;
   constructor(
-      private prestationService: PrestationsService
+      private prestationService: PrestationsService,
+      private router: Router
   ) {
       console.log(this.item);
   }
@@ -42,4 +45,16 @@ export class PrestationComponent implements OnInit {
 
       );
   }
+
+
+  public edit() {
+   //   this.router.navigate();
+      this.router.navigate(['/prestations/edit', this.item.id]);
+    // this.prestationService.delete(this.item).then((data) => {
+    //     this.prestationService.msg$.next('Prestation supprimée !');
+    // }
+
+    // );
+}
+
 }
