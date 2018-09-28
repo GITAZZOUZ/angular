@@ -17,6 +17,8 @@
                 </tr> -->
         </tbody>
     </table>
+    <!-- souscription au flux de donnée -->
+<div *ngIf="msg$ | async; let msg"> {{ msg }}</div>
 </div>
 <hr>
 <!-- <p> select permet de choisir la source de projection </p> -->

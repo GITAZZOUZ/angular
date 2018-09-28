@@ -47,6 +47,7 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
         'Total HT',
         'Total TTC',
         'Action',
+        'Delete',
       ];
       this.row = {
         route: 'add',

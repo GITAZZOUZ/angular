@@ -16,7 +16,8 @@ export class PrestationsService {
   private _collection$: Observable<Prestation[]>;
   private itemsCollection: AngularFirestoreCollection<Prestation>;
 //   private _collection: Observable<Prestation[]>;
-  public message$: Subject<string> = new Subject();
+//   public message$: Subject<string> = new Subject();
+    public msg$ = new Subject();
 
   constructor(
     private afs: AngularFirestore,

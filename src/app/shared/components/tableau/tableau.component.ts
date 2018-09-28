@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Row } from '../../interfaces/row';
+import { PrestationsService } from '../../../prestations/services/prestations.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-tableau',
@@ -10,9 +12,14 @@ import { Row } from '../../interfaces/row';
 export class TableauComponent implements OnInit {
   @Input() headers: string[];
   @Input() addRow: Row;
-  constructor() { }
+  public msg$: Subject<any>;
+
+  constructor(
+      private prestationService: PrestationsService
+  ) { }
 
   ngOnInit() {
+      this.msg$ = this.prestationService.msg$;
   }
 
 }
